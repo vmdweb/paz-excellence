@@ -3,7 +3,23 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-      "cloudinary": "^1.41.3",
-      "multiparty": "^4.2.3"
-    }
-  }  
+        "cloudinary": "^1.41.3",
+        "multiparty": "^4.2.3"
+    },
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vmdweb/paz-excellence.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vmdweb/paz-excellence/issues"
+    },
+    "homepage": "https://github.com/vmdweb/paz-excellence#readme"
+}
