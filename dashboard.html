@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paz_Excellence - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/dataLoader.js" defer></script>
+    <script src="js/cloudinary.js" defer></script>
+    <script src="js/upload.js" defer></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/dashboard.js" defer></script>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Logo" class="site-logo">
+    </a>
+    
+    <div class="language-switcher" id="languageSwitcher">
+        <button class="lang-option" data-lang="pt">
+            <img src="https://flagcdn.com/w20/br.png" alt="PT" class="lang-flag">
+            <span>PT</span>
+        </button>
+        <span class="lang-separator">|</span>
+        <button class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+            <span>EN</span>
+        </button>
+    </div>
+    
+    <div class="password-screen" id="passwordScreen">
+        <div class="password-prompt">
+            <h1>Dashboard Access</h1>
+            <input type="text" id="usernameInput" placeholder="Username" autofocus>
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button id="passwordSubmit">Enter</button>
+            <div class="password-error" id="passwordError"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h1>Dashboard</h1>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="upload">
+                    <span class="nav-icon">↑</span>
+                    <span class="nav-label" data-translate="uploadTracks">Upload Tracks</span>
+                </button>
+                <button class="nav-item" data-section="catalog">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label" data-translate="manageCatalog">Manage Catalog</span>
+                </button>
+                <button class="nav-item" data-section="calendar">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-label" data-translate="showsCalendar">Shows Calendar</span>
+                </button>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="content-header">
+                <h2 id="contentTitle" data-translate="uploadTracks">Upload Tracks</h2>
+            </div>
+
+            <div class="content-area">
+                <!-- Upload Section -->
+                <section class="content-section active" id="uploadSection">
+                    <div class="upload-form-container">
+                        <form class="dashboard-upload-form" id="dashboardUploadForm">
+                            <div class="form-field">
+                                <label for="dashTrackTitle">Track Title *</label>
+                                <input type="text" id="dashTrackTitle" name="title" placeholder="Enter track title" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="dashTrackArtist">Artist *</label>
+                                    <input type="text" id="dashTrackArtist" name="artist" placeholder="Artist name" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="dashTrackFeat">Feat. Artist</label>
+                                    <input type="text" id="dashTrackFeat" name="feat" placeholder="Optional">
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="dashTrackCountry">Country *</label>
+                                <select id="dashTrackCountry" name="country" required>
+                                    <option value="">Select country</option>
+                                    <option value="US">United States</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="NL">Netherlands</option>
+                                    <option value="BE">Belgium</option>
+                                    <option value="SE">Sweden</option>
+                                    <option value="NO">Norway</option>
+                                    <option value="DK">Denmark</option>
+                                    <option value="FI">Finland</option>
+                                    <option value="PL">Poland</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="GR">Greece</option>
+                                    <option value="IE">Ireland</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="CH">Switzerland</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="dashCoverInput">Cover Image *</label>
+                                <input type="file" id="dashCoverInput" accept="image/*" required>
+                                <div class="cover-preview" id="dashCoverPreview"></div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="dashAudioInput">Audio File (MP3) *</label>
+                                <input type="file" id="dashAudioInput" accept="audio/*" required>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="uploadSubmitBtn">Upload Track</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Catalog Section -->
+                <section class="content-section" id="catalogSection">
+                    <div class="catalog-manage-container">
+                        <div class="catalog-toolbar">
+                            <div class="toolbar-info">
+                                <span id="trackCount">0 tracks</span>
+                            </div>
+                            <button class="toolbar-btn" id="refreshCatalogBtn">Refresh</button>
+                        </div>
+                        <div class="catalog-list" id="catalogList">
+                            <div class="loading">Loading tracks...</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Calendar Section -->
+                <section class="content-section" id="calendarSection">
+                    <div class="calendar-container">
+                        <div class="calendar-form-container">
+                            <h3>Add Show</h3>
+                            <form class="show-form" id="showForm">
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="showDate">Date *</label>
+                                        <input type="date" id="showDate" name="date" required>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="showCountry">Country *</label>
+                                        <select id="showCountry" name="country" required>
+                                            <option value="">Select country</option>
+                                            <option value="US">United States</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="FR">France</option>
+                                            <option value="IT">Italy</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="BR">Brazil</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="showCity">City *</label>
+                                    <input type="text" id="showCity" name="city" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="showVenue">Venue *</label>
+                                    <input type="text" id="showVenue" name="venue" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="showLink">Link (Optional)</label>
+                                    <input type="url" id="showLink" name="link" placeholder="https://...">
+                                </div>
+
+                                <button type="submit" class="submit-btn">Add Show</button>
+                            </form>
+                        </div>
+
+                        <div class="calendar-list-container">
+                            <div class="calendar-toolbar">
+                                <div class="toolbar-info">
+                                    <span id="showCount">0 shows</span>
+                                </div>
+                                <button class="toolbar-btn" id="refreshShowsBtn">Refresh</button>
+                            </div>
+                            <div class="calendar-list" id="calendarList">
+                                <div class="loading">Loading shows...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof checkAuth === 'function') checkAuth();
+
+            // Logout direto
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    localStorage.removeItem('dashboardAuth');
+                    location.reload();
+                });
+            }
+
+            // Nav switch sections
+            const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const section = item.getAttribute('data-section');
+                    document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+                    const target = document.getElementById(section + 'Section');
+                    if (target) target.classList.add('active');
+
+                    document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                    item.classList.add('active');
+
+                    const titleEl = document.getElementById('contentTitle');
+                    if (titleEl) titleEl.textContent = item.querySelector('.nav-label').textContent;
+                });
+            });
+
+            // Refresh catalog button
+            const refreshBtn = document.getElementById('refreshCatalogBtn');
+            if (refreshBtn && typeof refreshCatalog === 'function') {
+                refreshBtn.addEventListener('click', () => refreshCatalog());
+            }
+
+            // Refresh shows button
+            const refreshShowsBtn = document.getElementById('refreshShowsBtn');
+            if (refreshShowsBtn && typeof loadShows === 'function') {
+                refreshShowsBtn.addEventListener('click', () => loadShows());
+            }
+        });
+    </script>
+</body>
+</html>

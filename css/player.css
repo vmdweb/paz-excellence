@@ -1,0 +1,308 @@
+.player-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    min-height: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: transparent;
+    padding: 24px 32px;
+    border: none;
+    box-shadow: none;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    flex-wrap: wrap;
+    background: transparent;
+    padding: 20px 40px;
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.player-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.015em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.player-artists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+}
+
+.player-artist-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.player-artist-link:hover {
+    color: #ffffff;
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+}
+
+.player-feat {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    font-style: italic;
+    margin: 0 4px;
+}
+
+.player-separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.player-logo-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+.player-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.player-logo.playing {
+    animation: rotateLogo 8s linear infinite;
+}
+
+.player-logo.paused {
+    animation: none;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.player-logo-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.player-logo-play-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: #ffffff;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.player-logo-play-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.player-waveform {
+    flex: 1;
+    height: 100px;
+    min-width: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    align-self: center;
+}
+
+#waveform {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+#waveform wave {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#waveform canvas {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#waveform wave {
+    overflow: visible;
+}
+
+#waveform wave > wave {
+    overflow: visible;
+}
+
+.player-time-current,
+.player-time-total {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    min-width: 40px;
+    text-align: left;
+}
+
+.player-time-total {
+    text-align: right;
+}
+
+.upload-btn,
+.shows-btn,
+.lang-toggle {
+    height: 54px;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.28s ease;
+    font-family: inherit;
+}
+
+.upload-btn:hover,
+.shows-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.upload-btn:active,
+.shows-btn:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+}
+
+.catalog-btn {
+    height: 54px;
+    padding: 0 22px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.28s ease;
+    font-family: inherit;
+}
+
+.catalog-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+}
+
+.catalog-btn:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+}
+
+.play-pause-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.play-pause-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.play-pause-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.play-pause-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.play-icon,
+.pause-icon {
+    display: block;
+}
+
+.play-icon.hidden,
+.pause-icon.hidden {
+    display: none;
+}

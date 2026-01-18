@@ -1,0 +1,142 @@
+.shows-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.92);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.shows-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shows-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 60px;
+}
+
+.shows-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shows-title {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.shows-close {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000000;
+    font-size: 14px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.shows-close:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.shows-section {
+    margin-bottom: 48px;
+}
+
+.shows-section-title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shows-item {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.shows-item:last-child {
+    border-bottom: none;
+}
+
+.shows-date {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.4;
+}
+
+.shows-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.shows-venue {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #000000;
+    line-height: 1.3;
+}
+
+.shows-location {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.01em;
+}
+
+.shows-link {
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+}
+
+.shows-link:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}
+
+.shows-empty {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    padding: 40px 0;
+    text-align: center;
+}

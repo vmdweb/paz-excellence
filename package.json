@@ -1,0 +1,9 @@
+{
+    "name": "music-platform",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+      "cloudinary": "^1.41.3",
+      "multiparty": "^4.2.3"
+    }
+  }  

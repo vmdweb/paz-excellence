@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paz_Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/playlist.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/shows.css">
+    <link rel="stylesheet" href="css/artist.css">
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="top-header">
+        <div class="language-switcher" id="languageSwitcher">
+        <button class="lang-option" data-lang="pt">
+            <img src="https://flagcdn.com/w20/br.png" alt="PT" class="lang-flag">
+            <span>PT</span>
+        </button>
+        <span class="lang-separator">|</span>
+        <button class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w20/us.png" alt="EN" class="lang-flag">
+            <span>EN</span>
+        </button>
+        </div>
+        
+        <div class="now-playing-header" id="nowPlayingHeader">
+            <div class="now-playing-label" data-translate="nowPlaying">NOW PLAYING</div>
+            <div class="now-playing-title" id="nowPlayingTitle">—</div>
+            <div class="now-playing-artist" id="nowPlayingArtist">—</div>
+        </div>
+    </div>
+    
+    <div class="background-container">
+        <div class="background-image" id="backgroundImage"></div>
+        <div class="overlay"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="player-container">
+            <div class="player">
+                <div class="player-logo-container" id="playerLogoContainer">
+                    <img src="assets/logo.png" alt="Logo" class="player-logo" id="playerLogo">
+                    <button class="player-logo-play-btn" id="playPauseBtn">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                        </svg>
+                    </button>
+                </div>
+                <span class="player-time-current" id="playerTimeCurrent">0:00</span>
+                <div class="player-waveform" id="waveform"></div>
+                <span class="player-time-total" id="playerTimeTotal">0:00</span>
+            </div>
+            <div class="player-info">
+                <div class="player-title" id="playerTitle" data-translate="selectTrack">Select a track</div>
+                <span class="player-separator">•</span>
+                <div class="player-artists" id="playerArtists">
+                    <a href="#" class="player-artist-link" id="playerArtistMain"></a>
+                    <span class="player-feat" id="playerFeat" style="display: none;">feat.</span>
+                    <a href="#" class="player-artist-link" id="playerArtistFeat" style="display: none;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <button class="nav-bottom-btn" id="catalogBtn" data-translate="aToZ">A–Z</button>
+        <button class="nav-bottom-btn" id="showsBtn" data-translate="shows">Shows</button>
+        <button class="nav-bottom-btn" id="contactBtn" data-translate="contact">Contato</button>
+    </div>
+
+    <div class="playlist-container">
+        <div class="playlist-header" data-translate="playlist">Playlist</div>
+        <div class="playlist" id="playlist"></div>
+    </div>
+
+    <div class="catalog-overlay" id="catalogOverlay">
+        <div class="catalog-content">
+            <div class="catalog-header">
+                <div class="catalog-title" data-translate="catalog">Catalog</div>
+                <button class="catalog-close" id="catalogClose" data-translate="close">Close</button>
+            </div>
+            <div id="catalogContent"></div>
+        </div>
+    </div>
+
+    <div class="artist-overlay" id="artistOverlay">
+        <div class="artist-content">
+            <div class="artist-header">
+                <div class="artist-title" id="artistTitle"></div>
+                <button class="artist-close" id="artistClose" data-translate="close">Close</button>
+            </div>
+            <div class="artist-tracks" id="artistTracks"></div>
+        </div>
+    </div>
+
+    <div class="shows-overlay" id="showsOverlay">
+        <div class="shows-content">
+            <div class="shows-header">
+                <div class="shows-title" data-translate="shows">Shows</div>
+                <button class="shows-close" id="showsClose" data-translate="close">Close</button>
+            </div>
+            <div id="showsContent"></div>
+        </div>
+    </div>
+
+    <div class="contact-overlay" id="contactOverlay">
+        <div class="contact-content">
+            <div class="contact-header">
+                <div class="contact-title" data-translate="contact">Contato</div>
+                <button class="contact-close" id="contactClose" data-translate="close">Close</button>
+            </div>
+            <div class="contact-body" id="contactBody">
+                <p class="contact-message" data-translate="contactMessage">For collaborations, licensing or professional inquiries, reach us at</p>
+                <p class="contact-email">contact@pazexcellence.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <audio id="audioElement" preload="auto"></audio>
+
+    <script src="js/dataLoader.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/shows.js"></script>
+    <script src="js/contact.js"></script>
+    <script>
+        function updateLangSwitcher(lang) {
+            const langSwitcher = document.getElementById('languageSwitcher');
+            if (langSwitcher) {
+                const langOptions = langSwitcher.querySelectorAll('.lang-option');
+                langOptions.forEach(btn => {
+                    if (btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguage();
+            
+            // Language switcher
+            const langSwitcher = document.getElementById('languageSwitcher');
+            if (langSwitcher) {
+                const langOptions = langSwitcher.querySelectorAll('.lang-option');
+                langOptions.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const newLang = btn.getAttribute('data-lang');
+                        setLanguage(newLang);
+                        updateLangSwitcher(newLang);
+                    });
+                });
+                updateLangSwitcher(currentLanguage);
+            }
+        });
+    </script>
+</body>
+</html>

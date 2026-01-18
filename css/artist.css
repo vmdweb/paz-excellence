@@ -1,0 +1,157 @@
+    .artist-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.92);
+        z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .artist-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .artist-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 60px;
+    }
+
+    .artist-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .artist-title {
+        font-size: 32px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #000000;
+    }
+
+    .artist-close {
+        background: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        color: #000000;
+        font-size: 14px;
+        padding: 8px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        letter-spacing: 0.02em;
+    }
+
+    .artist-close:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .artist-tracks-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .artist-track-item {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease;
+        position: relative;
+    }
+
+    .artist-track-item:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .artist-track-cover {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .artist-track-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .artist-track-info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .artist-track-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        margin-bottom: 4px;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .artist-track-artist {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.6);
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .artist-track-play-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #000000;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        padding: 0;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .artist-track-play-btn:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-color: rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+    .artist-track-play-btn svg {
+        width: 18px;
+        height: 18px;
+        margin-left: 2px;
+    }
+
+    .artist-empty {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.4);
+        font-style: italic;
+        padding: 40px 0;
+        text-align: center;
+    }
