@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
+  /* ---------------- LOGOUT ---------------- */
+  
   function initLogout() {
     document.getElementById("logoutBtn")?.addEventListener("click", () => {
       localStorage.removeItem("dashboardAuth");
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  /* ---------------- NAV ---------------- */
+  /* ---------------- NAVIGATION ---------------- */
   
   function initNavigation() {
     document.querySelectorAll(".nav-item").forEach(btn => {
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  /* ---------------- UPLOAD ---------------- */
+  /* ---------------- UPLOAD FORM ---------------- */
   
   function initUploadForm() {
     const form = document.getElementById("dashboardUploadForm");
@@ -113,9 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.textContent = "Uploading...";
   
     try {
+      // Upload para Cloudinary
       const coverUrl = await uploadToCloudinary(dashCoverFile, "image", "covers_unsigned");
       const audioUrl = await uploadToCloudinary(dashAudioFile, "video", "audio_unsigned");
   
+      // Pegar JSON existente
       let tracks = [];
       try {
         const r = await fetch("https://res.cloudinary.com/dodnqnyof/raw/upload/tracks_yvlriw.json");
@@ -133,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
       };
   
       tracks.push(newTrack);
+  
+      // Atualizar JSON no Cloudinary
       await uploadJSONToCloudinary(tracks, "tracks_yvlriw");
   
       alert("Track uploaded!");
@@ -143,14 +149,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
     } catch (err) {
       console.error(err);
-      alert("Upload failed");
+      alert("Upload failed: " + err.message);
     } finally {
       btn.disabled = false;
       btn.textContent = "Upload Track";
     }
   }
   
-  /* ---------------- CLOUDINARY ---------------- */
+  /* ---------------- CLOUDINARY HELPERS ---------------- */
   
   async function uploadToCloudinary(file, type, preset) {
     const fd = new FormData();

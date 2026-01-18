@@ -168,6 +168,67 @@
                 updateLangSwitcher(currentLanguage);
             }
         });
+
+        document.addEventListener('DOMContentLoaded', async () => {
+    const playlistEl = document.getElementById('playlist');
+    const playerTitle = document.getElementById('playerTitle');
+    const playerArtists = document.getElementById('playerArtists');
+    const audioElement = document.getElementById('audioElement');
+
+    // Cria Wavesurfer
+    const wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: '#888',
+        progressColor: '#fff',
+        height: 60,
+        barWidth: 2,
+        responsive: true
+    });
+
+    let currentTrackIndex = null;
+    let tracks = await loadTracks();
+
+    function renderPlaylist() {
+        playlistEl.innerHTML = '';
+        tracks.forEach((track, i) => {
+            const trackEl = document.createElement('div');
+            trackEl.classList.add('playlist-track');
+            trackEl.innerHTML = `
+                <span class="playlist-title">${track.title}</span> •
+                <span class="playlist-artist">${track.artists.join(', ')}</span>
+            `;
+            trackEl.addEventListener('click', () => playTrack(i));
+            playlistEl.appendChild(trackEl);
+        });
+    }
+
+    function playTrack(index) {
+        if (!tracks[index]) return;
+        const track = tracks[index];
+        currentTrackIndex = index;
+
+        // Atualiza informações do player
+        playerTitle.textContent = track.title;
+        playerArtists.textContent = track.artists.join(', ');
+
+        // Carrega áudio no Wavesurfer
+        wavesurfer.load(track.audio);
+        wavesurfer.on('ready', () => wavesurfer.play());
+    }
+
+    // Play/Pause
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    playPauseBtn.addEventListener('click', () => {
+        if (wavesurfer.isPlaying()) {
+            wavesurfer.pause();
+        } else {
+            wavesurfer.play();
+        }
+    });
+
+    renderPlaylist();
+});
+
     </script>
 </body>
 </html>
