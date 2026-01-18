@@ -1,28 +1,31 @@
-/* ------------------- Catalog Module (Flutuante e Filtrável) ------------------- */
+/* ------------------- Catalog Module (Safe Init) ------------------- */
 
 let catalogOverlay = null;
 let catalogContent = null;
 
 let artistOverlay = null;
 let artistTracksContainer = null;
-let currentArtistTracks = null;
-let currentLetterFilter = null;
+let currentLetterFilter = "all";
 
+/* ---------- INIT ---------- */
 function initCatalog() {
-    catalogOverlay = document.getElementById('catalogOverlay');
-    catalogContent = document.getElementById('catalogContent');
+    catalogOverlay = document.getElementById("catalogOverlay");
+    catalogContent = document.getElementById("catalogContent");
 
-    const closeBtn = document.getElementById('catalogClose');
-    if (closeBtn) closeBtn.addEventListener('click', closeCatalog);
+    // Se não existir (ex: dashboard), não faz nada
+    if (!catalogOverlay || !catalogContent) return;
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && catalogOverlay.classList.contains('active')) {
-            closeCatalog();
-        }
+    const closeBtn = document.getElementById("catalogClose");
+    closeBtn?.addEventListener("click", closeCatalog);
+
+    catalogOverlay.addEventListener("click", (e) => {
+        if (e.target === catalogOverlay) closeCatalog();
     });
 
-    catalogOverlay.addEventListener('click', (e) => {
-        if (e.target === catalogOverlay) closeCatalog();
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && catalogOverlay.classList.contains("active")) {
+            closeCatalog();
+        }
     });
 
     initArtistOverlay();
@@ -30,194 +33,102 @@ function initCatalog() {
 
 function openCatalog() {
     if (!catalogOverlay || !catalogContent) return;
-    currentLetterFilter = 'all'; // mostra todos inicialmente
+    currentLetterFilter = "all";
     buildCatalog();
-    catalogOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    catalogOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
 function closeCatalog() {
     if (!catalogOverlay) return;
-    catalogOverlay.classList.remove('active');
-    document.body.style.overflow = '';
+    catalogOverlay.classList.remove("active");
+    document.body.style.overflow = "";
 }
 
-/* ------------------- Build Catalog ------------------- */
-
+/* ---------- BUILD ---------- */
 async function buildCatalog() {
     if (!catalogContent) return;
 
     const tracks = await loadTracks();
-    if (!tracks || !tracks.length) {
-        catalogContent.innerHTML = '<div class="catalog-empty">No tracks available</div>';
+    if (!tracks.length) {
+        catalogContent.innerHTML = "<div>No tracks available</div>";
         return;
     }
 
     const artistMap = new Map();
-    const trackSet = new Set();
 
     tracks.forEach(track => {
-        const trackId = track.id;
-        if (trackSet.has(trackId)) return;
-        trackSet.add(trackId);
-
-        const mainArtist = track.artists?.[0] || null;
-        const featArtist = track.featArtist || track.artists?.[1] || null;
-
-        if (mainArtist) {
-            if (!artistMap.has(mainArtist)) artistMap.set(mainArtist, []);
-            if (!artistMap.get(mainArtist).some(t => t.id === trackId)) artistMap.get(mainArtist).push(track);
-        }
-        if (featArtist && featArtist !== mainArtist) {
-            if (!artistMap.has(featArtist)) artistMap.set(featArtist, []);
-            if (!artistMap.get(featArtist).some(t => t.id === trackId)) artistMap.get(featArtist).push(track);
-        }
+        track.artists.forEach(a => {
+            if (!artistMap.has(a)) artistMap.set(a, []);
+            artistMap.get(a).push(track);
+        });
     });
 
-    const sortedArtists = Array.from(artistMap.keys()).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
-    const letterGroups = new Map();
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    let html = `<div class="catalog-letters">`;
 
-    sortedArtists.forEach(artist => {
-        const firstLetter = artist.charAt(0).toUpperCase();
-        if (!letterGroups.has(firstLetter)) letterGroups.set(firstLetter, []);
-        letterGroups.get(firstLetter).push(artist);
+    letters.forEach(l => {
+        html += `<button class="catalog-letter-btn ${currentLetterFilter === l ? "active" : ""}" data-letter="${l}">${l}</button>`;
     });
+    html += `<button class="catalog-letter-btn ${currentLetterFilter === "all" ? "active" : ""}" data-letter="all">All</button>`;
+    html += `</div><div class="catalog-grid">`;
 
-    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-
-    // Letras filtro topo
-    let html = '<div class="catalog-letters">';
-    alphabet.forEach(letter => {
-        html += `<button class="catalog-letter-btn${currentLetterFilter === letter ? ' active' : ''}" data-letter="${letter}">${letter}</button>`;
-    });
-    html += `<button class="catalog-letter-btn${currentLetterFilter === 'all' ? ' active' : ''}" data-letter="all">All</button>`;
-    html += '</div>';
-
-    // Grid de artistas filtrados
-    html += '<div class="catalog-grid">';
-    alphabet.forEach(letter => {
-        if (currentLetterFilter && currentLetterFilter !== 'all' && currentLetterFilter !== letter) return;
-
-        const artists = letterGroups.get(letter) || [];
+    letters.forEach(letter => {
+        if (currentLetterFilter !== "all" && currentLetterFilter !== letter) return;
+        const artists = [...artistMap.keys()].filter(a => a[0].toUpperCase() === letter);
         if (!artists.length) return;
 
-        html += '<div class="catalog-letter-section">';
-        html += `<div class="catalog-letter">${letter}</div>`;
-        html += '<ul class="catalog-artists">';
-        artists.forEach(artist => {
-            html += `<li class="catalog-artist-item">
-                <a href="#" class="catalog-artist-link" data-artist="${escapeHtml(artist)}">${escapeHtml(artist)}</a>
-            </li>`;
+        html += `<div><h3>${letter}</h3><ul>`;
+        artists.forEach(a => {
+            html += `<li><a href="#" data-artist="${a}">${a}</a></li>`;
         });
-        html += '</ul></div>';
+        html += `</ul></div>`;
     });
-    html += '</div>';
 
+    html += `</div>`;
     catalogContent.innerHTML = html;
 
-    // Letras filtragem
-    catalogContent.querySelectorAll('.catalog-letter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            currentLetterFilter = btn.getAttribute('data-letter');
+    catalogContent.querySelectorAll("[data-letter]").forEach(btn => {
+        btn.onclick = () => {
+            currentLetterFilter = btn.dataset.letter;
             buildCatalog();
-        });
+        };
     });
 
-    // Abrir artista
-    catalogContent.querySelectorAll('.catalog-artist-link').forEach(link => {
-        link.addEventListener('click', (e) => {
+    catalogContent.querySelectorAll("[data-artist]").forEach(link => {
+        link.onclick = (e) => {
             e.preventDefault();
-            const artistName = link.getAttribute('data-artist');
-            const artistTracks = artistMap.get(artistName);
-            if (artistTracks?.length) openArtistTracks(artistName, artistTracks);
-        });
+            openArtistTracks(link.dataset.artist, artistMap.get(link.dataset.artist));
+        };
     });
 }
 
-/* ------------------- Artist Overlay ------------------- */
-
+/* ---------- ARTIST ---------- */
 function initArtistOverlay() {
-    artistOverlay = document.getElementById('artistOverlay');
-    artistTracksContainer = document.getElementById('artistTracks');
-
-    const closeBtn = document.getElementById('artistClose');
-    if (closeBtn) closeBtn.addEventListener('click', closeArtistTracks);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && artistOverlay?.classList.contains('active')) {
-            closeArtistTracks();
-        }
-    });
-
-    artistOverlay?.addEventListener('click', (e) => {
-        if (e.target === artistOverlay) closeArtistTracks();
-    });
-}
-
-function openArtistTracks(artistName, tracks) {
+    artistOverlay = document.getElementById("artistOverlay");
+    artistTracksContainer = document.getElementById("artistTracks");
     if (!artistOverlay || !artistTracksContainer) return;
 
-    currentArtistTracks = tracks;
-    document.getElementById('artistTitle').textContent = artistName;
-
-    buildArtistTracks(tracks);
-    artistOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.getElementById("artistClose")?.addEventListener("click", closeArtistTracks);
 }
 
-window.openArtistTracks = openArtistTracks;
+function openArtistTracks(name, tracks) {
+    if (!artistOverlay || !artistTracksContainer) return;
+    document.getElementById("artistTitle").textContent = name;
+
+    artistTracksContainer.innerHTML = tracks.map(t => `
+        <div>
+            <img src="${t.cover}">
+            <span>${t.title}</span>
+            <button onclick='window.playTrack(${JSON.stringify(t)})'>▶</button>
+        </div>
+    `).join("");
+
+    artistOverlay.classList.add("active");
+}
 
 function closeArtistTracks() {
-    if (!artistOverlay) return;
-    artistOverlay.classList.remove('active');
-    document.body.style.overflow = '';
+    artistOverlay?.classList.remove("active");
 }
 
-/* ------------------- Artist Tracks List ------------------- */
-
-function buildArtistTracks(tracks) {
-    if (!artistTracksContainer) return;
-    if (!tracks.length) {
-        artistTracksContainer.innerHTML = '<div class="artist-empty">No tracks available</div>';
-        return;
-    }
-
-    let html = '<div class="artist-tracks-list">';
-    tracks.forEach(track => {
-        html += `
-        <div class="artist-track-item">
-            <img class="artist-track-cover" src="${escapeHtml(track.cover)}" alt="${escapeHtml(track.title)}">
-            <div class="artist-track-info">
-                <div class="artist-track-title">${escapeHtml(track.title)}</div>
-                <div class="artist-track-artist">${escapeHtml(track.artists.join(', '))}</div>
-            </div>
-            <button class="artist-track-play-btn" data-track-id="${track.id}">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-        </div>`;
-    });
-    html += '</div>';
-
-    artistTracksContainer.innerHTML = html;
-
-    artistTracksContainer.querySelectorAll('.artist-track-play-btn').forEach(btn => {
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            const track = tracks.find(t => t.id == btn.dataset.trackId);
-            if (track && typeof window.playTrack === 'function') {
-                window.playTrack(track);
-                closeArtistTracks();
-                closeCatalog();
-            }
-        });
-    });
-}
-
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
-
-function refreshCatalog() { buildCatalog(); }
-window.refreshCatalog = refreshCatalog;
+window.refreshCatalog = buildCatalog;

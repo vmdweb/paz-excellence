@@ -4,18 +4,18 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    initLanguage?.();
-    if (!isAuthenticated()) {
-        showLoginScreen();
-    } else {
-        showDashboard();
+
+    if (document.getElementById("dashboardContainer")) {
+        initLogin();
+        initNavigation();
+        initUploadForm();
+        initEditForm?.();
+        initLogout();
     }
-    initLogin();
-    initNavigation();
-    initUploadForm();
-    initCatalog();
-    initEditForm();
-    initLogout();
+
+    if (typeof initCatalog === "function") {
+        initCatalog();
+    }
 });
 
 let dashCoverFile = null;
