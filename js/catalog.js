@@ -58,7 +58,7 @@ async function buildCatalog() {
     const artistMap = new Map();
 
     tracks.forEach(track => {
-        track.artists.forEach(a => {
+        track.artists?.join(", ").forEach(a => {
             if (!artistMap.has(a)) artistMap.set(a, []);
             artistMap.get(a).push(track);
         });
