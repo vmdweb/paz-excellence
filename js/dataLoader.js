@@ -15,13 +15,11 @@ let tracksData = [];
  */
 async function loadTracks() {
   try {
-    const response = await fetch(TRACKS_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error("Failed to load Cloudinary tracks");
+    const response = await fetch('data/tracks-db.json');
+const tracks = await response.json();
+tracksData = tracks;
+return tracksData;
 
-    const cloudTracks = await response.json();
-    tracksData = applyTrackOrder(cloudTracks);
-
-    return tracksData;
   } catch (error) {
     console.warn("Cloudinary failed, using localStorage", error);
 
