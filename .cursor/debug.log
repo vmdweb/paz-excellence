@@ -219,3 +219,54 @@
 {"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826406404,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
 {"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826406415,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
 {"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826406415,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828731149,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828731202,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828731202,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828736229,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828736299,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828736300,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828736300,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828736328,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828736329,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828736331,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828736362,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828736363,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828741220,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828741245,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828741245,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828746217,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828746243,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828746243,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828751226,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828751283,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828751284,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828756225,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828756252,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828756253,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828761226,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828761256,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828761257,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828766389,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828766429,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828766429,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828771387,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828771415,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828771416,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828776383,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828776417,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828776418,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828781383,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828781411,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828781412,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828786377,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828786431,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828786431,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828791370,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828791398,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828791398,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828851374,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828851429,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828851429,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768828911367,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768828911394,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768828911394,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}

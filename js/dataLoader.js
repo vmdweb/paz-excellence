@@ -16,7 +16,9 @@ async function loadTracks() {
     
     try {
         // URL do JSON que você envia para o Cloudinary (adiciona cache-busting para evitar cache)
-        const cloudinaryJsonUrl = "https://res.cloudinary.com/dodnqnyof/raw/upload/tracks_yvlriw.json?t=" + Date.now();
+        // Usa timestamp para garantir que sempre busca a versão mais recente
+        const cacheBuster = Date.now();
+        const cloudinaryJsonUrl = `https://res.cloudinary.com/dodnqnyof/raw/upload/tracks_yvlriw.json?_=${cacheBuster}`;
 
         const response = await fetch(cloudinaryJsonUrl);
         // #region agent log

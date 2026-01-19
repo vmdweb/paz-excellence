@@ -174,6 +174,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Disparar evento para atualizar a index (se estiver na mesma aba)
       window.dispatchEvent(new CustomEvent('tracksUpdated'));
+      
+      // Também usar localStorage como fallback para comunicação entre abas
+      localStorage.setItem('tracksLastUpdated', Date.now().toString());
+      window.dispatchEvent(new StorageEvent('storage', {
+        key: 'tracksLastUpdated',
+        newValue: Date.now().toString()
+      }));
+      
       // #region agent log
       fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'dashboard.js:153',message:'tracksUpdated event DISPATCHED',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
       // #endregion

@@ -40,8 +40,29 @@ function createPlaylistItem(track, index) {
     const cover = document.createElement('div');
     cover.className = 'playlist-item-cover';
     const coverImg = document.createElement('img');
-    coverImg.src = track.cover;
-    coverImg.alt = track.title;
+    
+    // Garantir que a URL da imagem está correta e adicionar cache-busting se necessário
+    let coverUrl = track.cover;
+    if (coverUrl && !coverUrl.startsWith('blob:') && !coverUrl.includes('?')) {
+        coverUrl += '?t=' + Date.now();
+    }
+    
+    coverImg.src = coverUrl || '';
+    coverImg.alt = track.title || '';
+    
+    // Error handling para imagens que não carregam
+    coverImg.onerror = function() {
+        this.style.display = 'none';
+        cover.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+    };
+    
+    coverImg.onload = function() {
+        this.style.opacity = '1';
+    };
+    
+    coverImg.style.opacity = '0';
+    coverImg.style.transition = 'opacity 0.3s ease';
+    
     cover.appendChild(coverImg);
 
     const info = document.createElement('div');
@@ -49,7 +70,7 @@ function createPlaylistItem(track, index) {
     
     const title = document.createElement('div');
     title.className = 'playlist-item-title';
-    title.textContent = track.title;
+    title.textContent = track.title || '';
     
     const artists = document.createElement('div');
     artists.className = 'playlist-item-artists';
@@ -128,6 +149,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         contactBtn.addEventListener('click', openContact);
     }
     
+    // Escutar evento tracksUpdated (mesma aba)
     window.addEventListener('tracksUpdated', async () => {
         // #region agent log
         fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'playlist.js:131',message:'tracksUpdated event RECEIVED',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
@@ -137,4 +159,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             refreshCatalog();
         }
     });
+    
+    // Escutar mudanças no localStorage (outras abas)
+    window.addEventListener('storage', async (e) => {
+        if (e.key === 'tracksLastUpdated') {
+            // #region agent log
+            fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'playlist.js:140',message:'storage event RECEIVED (cross-tab)',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+            // #endregion
+            await refreshPlaylist();
+            if (typeof refreshCatalog === 'function') {
+                refreshCatalog();
+            }
+        }
+    });
+    
+    // Polling como fallback adicional (verifica a cada 5 segundos se há novas tracks)
+    let lastTrackCount = 0;
+    setInterval(async () => {
+        const tracks = await loadTracks();
+        if (tracks.length !== lastTrackCount) {
+            lastTrackCount = tracks.length;
+            await refreshPlaylist();
+            if (typeof refreshCatalog === 'function') {
+                refreshCatalog();
+            }
+        }
+    }, 5000);
 });
