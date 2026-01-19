@@ -1,0 +1,221 @@
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825692513,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825692515,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825692518,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825692544,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825692545,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825692550,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825692550,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":0},"timestamp":1768825692550,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":0},"timestamp":1768825692551,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825764417,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825764419,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825764427,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825764452,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825764452,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825764457,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825764457,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":0},"timestamp":1768825764458,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":0},"timestamp":1768825764458,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dashboard.js:100","message":"handleDashSubmit ENTRY","data":{"hasFiles":{}},"timestamp":1768825806013,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"dashboard.js:161","message":"uploadToCloudinary ENTRY","data":{"type":"image","preset":"covers_unsigned","fileName":"wall3.png"},"timestamp":1768825806014,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:171","message":"uploadToCloudinary RESPONSE","data":{"ok":true,"status":200,"secureUrl":"https://res.cloudinary.com/dodnqnyof/image/upload/v1768825805/xisdqnr5wjorertcstms.png","hasSecureUrl":true},"timestamp":1768825807341,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:119","message":"coverUrl AFTER upload","data":{"coverUrl":"https://res.cloudinary.com/dodnqnyof/image/upload/v1768825805/xisdqnr5wjorertcstms.png","isBlob":false},"timestamp":1768825807341,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:161","message":"uploadToCloudinary ENTRY","data":{"type":"video","preset":"audio_unsigned","fileName":"mixkit-infected-mushroom-vibes-136.mp3"},"timestamp":1768825807342,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:171","message":"uploadToCloudinary RESPONSE","data":{"ok":true,"status":200,"secureUrl":"https://res.cloudinary.com/dodnqnyof/video/upload/v1768825807/ez7tvzm6sdnryppafu1d.mp3","hasSecureUrl":true},"timestamp":1768825809353,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:121","message":"audioUrl AFTER upload","data":{"audioUrl":"https://res.cloudinary.com/dodnqnyof/video/upload/v1768825807/ez7tvzm6sdnryppafu1d.mp3","isBlob":false},"timestamp":1768825809353,"sessionId":"debug-session","runId":"run1","hypothesisId":"E"}
+{"location":"dashboard.js:127","message":"tracks BEFORE push","data":{"tracksCount":0},"timestamp":1768825809388,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:139","message":"tracks AFTER push BEFORE uploadJSON","data":{"tracksCount":1,"newTrack":{"id":1768825809389,"title":"Mush","artists":["Test","Room"],"cover":"https://res.cloudinary.com/dodnqnyof/image/upload/v1768825805/xisdqnr5wjorertcstms.png","audio":"https://res.cloudinary.com/dodnqnyof/video/upload/v1768825807/ez7tvzm6sdnryppafu1d.mp3","country":"DE","createdAt":"2026-01-19T12:30:09.389Z"}},"timestamp":1768825809389,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:220","message":"uploadJSONToCloudinary ENTRY","data":{"publicId":"tracks_yvlriw","jsonLength":1},"timestamp":1768825809389,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:238","message":"uploadJSONToCloudinary RESPONSE","data":{"ok":true,"status":200,"responseData":{"asset_id":"3d9393e4a5f9a58edf30d5531a681d8b","public_id":"tracks_yvlriw.json","version":1768825808,"version_id":"e2345151e032dd537fee7c71de7bb833","signature":"c252eb3edc2d0d192958c4a7657ac8ffbb5efe2e","resource_type":"raw","created_at":"2026-01-19T12:30:08Z","tags":[],"bytes":379,"type":"upload","etag":"e249caea76bcd582b73b8d88de7cd004","placeholder":false,"url":"http://res.cloudinary.com/dodnqnyof/raw/upload/v1768825808/tracks_yvlriw.json","secure_url":"https://res.cloudinary.com/dodnqnyof/raw/upload/v1768825808/tracks_yvlriw.json","asset_folder":"raw","display_name":"tracks","existing":false,"original_filename":"tracks"}},"timestamp":1768825810152,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:142","message":"uploadJSONToCloudinary SUCCESS","data":{"tracksCount":1},"timestamp":1768825810152,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:145","message":"verify JSON after upload","data":{"ok":false,"status":404},"timestamp":1768825811182,"sessionId":"debug-session","runId":"run1","hypothesisId":"A"}
+{"location":"dashboard.js:149","message":"tracksUpdated event DISPATCHED","data":{},"timestamp":1768825811182,"sessionId":"debug-session","runId":"run1","hypothesisId":"B"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825817819,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825817820,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825817824,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825817849,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825817849,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":false,"status":404},"timestamp":1768825817856,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:27","message":"loadTracks ERROR","data":{"error":"Failed to load tracks from Cloudinary"},"timestamp":1768825817856,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":0},"timestamp":1768825817857,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":0},"timestamp":1768825817857,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825819655,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825819656,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825819659,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825819837,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825819838,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825819838,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825819838,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825819840,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825819840,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825897198,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825897199,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825897199,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825897200,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825897204,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825897204,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825897236,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825897237,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825897253,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825897254,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825897271,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825897276,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825897279,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825897279,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825897279,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825897279,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825897280,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825897280,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825964491,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825964493,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825964501,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825964527,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825964529,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825964546,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825964554,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825964554,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825964554,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825971461,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825971462,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825971464,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825971488,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825971489,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825971498,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825971498,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825971499,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825971499,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825985037,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825985037,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825985040,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825985080,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825985081,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825985081,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825985081,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825985082,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825985082,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825986154,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825986155,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825986157,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825986180,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825986181,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825986181,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825986187,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825986187,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825986187,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825987252,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825987253,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825987255,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825987278,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825987279,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825987288,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825987289,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825987289,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825987290,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825987852,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825987853,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825987856,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825987879,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825987880,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825987883,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825987889,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825987890,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825987890,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988324,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825988324,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988327,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988351,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988352,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988362,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988363,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825988363,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825988363,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988508,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825988509,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988512,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988531,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988536,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988541,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988545,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825988546,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825988546,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988664,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825988664,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988667,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988691,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988692,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988705,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988709,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825988709,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825988710,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988811,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825988812,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988815,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988844,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988845,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988851,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988856,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825988857,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825988862,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988948,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768825988949,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768825988952,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988977,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988978,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768825988978,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768825988979,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768825988989,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768825988990,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826140803,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826140804,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826140806,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826140848,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826140848,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826140849,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826140849,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826140850,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826140851,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826220862,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826220863,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826220865,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826220891,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826220892,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826220893,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826220898,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826220898,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826220898,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826343811,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826343812,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826343819,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826343902,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826343902,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826343935,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826343940,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826343941,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826343941,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826348683,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826348685,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826348688,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826348712,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826348713,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826348725,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826348731,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826348731,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826348731,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826349702,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826349703,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826349705,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826349729,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826349729,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826349730,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826349730,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826349733,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826349734,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826406351,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:172","message":"index.html inline code ENTRY","data":{},"timestamp":1768826406353,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:12","message":"loadTracks ENTRY","data":{},"timestamp":1768826406362,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826406403,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826406404,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"index.html:189","message":"tracks loaded in inline code","data":{"tracksCount":1},"timestamp":1768826406404,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"index.html:240","message":"renderPlaylist called","data":{"tracksCount":1},"timestamp":1768826406404,"sessionId":"debug-session","runId":"run1","hypothesisId":"C"}
+{"location":"dataLoader.js:18","message":"loadTracks FETCH RESPONSE","data":{"ok":true,"status":200},"timestamp":1768826406415,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}
+{"location":"dataLoader.js:23","message":"loadTracks SUCCESS","data":{"tracksCount":1,"firstTrackId":1768825809389},"timestamp":1768826406415,"sessionId":"debug-session","runId":"run1","hypothesisId":"D"}

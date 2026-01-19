@@ -170,6 +170,10 @@
         });
 
         document.addEventListener('DOMContentLoaded', async () => {
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:172',message:'index.html inline code ENTRY',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+    
     const playlistEl = document.getElementById('playlist');
     const playerTitle = document.getElementById('playerTitle');
     const playerArtists = document.getElementById('playerArtists');
@@ -187,6 +191,17 @@
 
     let currentTrackIndex = null;
     let tracks = await loadTracks();
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:189',message:'tracks loaded in inline code',data:{tracksCount:tracks.length},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+
+    async function refreshTracks() {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:193',message:'refreshTracks called',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+        // #endregion
+        tracks = await loadTracks();
+        renderPlaylist();
+    }
 
     function renderPlaylist() {
         playlistEl.innerHTML = '';
@@ -226,7 +241,18 @@
         }
     });
 
+    // Escutar evento de atualização de tracks
+    window.addEventListener('tracksUpdated', async () => {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:231',message:'tracksUpdated event RECEIVED in inline code',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+        // #endregion
+        await refreshTracks();
+    });
+
     renderPlaylist();
+    // #region agent log
+    fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:240',message:'renderPlaylist called',data:{tracksCount:tracks.length},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
 });
 
     </script>

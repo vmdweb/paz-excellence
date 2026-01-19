@@ -129,6 +129,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     window.addEventListener('tracksUpdated', async () => {
+        // #region agent log
+        fetch('http://127.0.0.1:7242/ingest/f538aeba-5d1a-4433-b1bf-60e9cc7a1e35',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'playlist.js:131',message:'tracksUpdated event RECEIVED',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
         await refreshPlaylist();
         if (typeof refreshCatalog === 'function') {
             refreshCatalog();
